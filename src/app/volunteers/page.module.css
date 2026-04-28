@@ -1,0 +1,221 @@
+.volunteersHeader {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.statHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.statValue {
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.statTrend {
+  font-size: 0.875rem;
+  color: var(--success);
+  font-weight: 500;
+}
+
+.statSubtext {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.filterBtn {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-panel);
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.filterBtn.active {
+  border-color: var(--accent-amber);
+  color: var(--accent-amber);
+  background: var(--accent-amber-transparent);
+}
+
+.volunteersGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.volunteerCard {
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.cardContent {
+  flex: 1;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.badge {
+  font-size: 0.65rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.badge.PLATINUM { background: rgba(139, 92, 246, 0.2); color: #c4b5fd; border: 1px solid #8b5cf6; }
+.badge.GOLD { background: rgba(245, 158, 11, 0.2); color: #fcd34d; border: 1px solid #f59e0b; }
+.badge.SILVER { background: rgba(148, 163, 184, 0.2); color: #cbd5e1; border: 1px solid #94a3b8; }
+.badge.BRONZE { background: rgba(217, 119, 6, 0.2); color: #f59e0b; border: 1px solid #d97706; }
+
+.ratingRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.rating {
+  color: var(--accent-amber);
+  font-weight: 700;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.missionsCount {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.skillsRow {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.skillTag {
+  background: var(--bg-dark);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.statusRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.statusIndicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.status.ACTIVE { color: var(--success); }
+.status.ACTIVE .statusIndicator { background: var(--success); }
+.status.BUSY { color: var(--accent-amber); }
+.status.BUSY .statusIndicator { background: var(--accent-amber); }
+.status.OFFLINE { color: var(--text-muted); }
+.status.OFFLINE .statusIndicator { background: var(--text-muted); }
+
+.trackerSection {
+  padding: 1.5rem;
+}
+
+.trackerTitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.skillBarContainer {
+  margin-bottom: 1rem;
+}
+
+.skillBarHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 0.875rem;
+}
+
+.skillTrack {
+  height: 6px;
+  background: var(--bg-dark);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skillFill {
+  height: 100%;
+  border-radius: 3px;
+}

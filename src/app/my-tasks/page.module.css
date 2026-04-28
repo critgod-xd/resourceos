@@ -1,0 +1,109 @@
+.header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 0.5rem;
+}
+
+.missionCard {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.missionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.missionTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.criticality {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.criticality.HIGH { background: rgba(239, 68, 68, 0.2); color: var(--danger); border: 1px solid var(--danger); }
+.criticality.MEDIUM { background: rgba(245, 158, 11, 0.2); color: var(--accent-amber); border: 1px solid var(--accent-amber); }
+.criticality.LOW { background: rgba(16, 185, 129, 0.2); color: var(--success); border: 1px solid var(--success); }
+
+.progressBar {
+  height: 8px;
+  background: var(--bg-dark);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--accent-amber);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.missionActions {
+  display: flex;
+  gap: 8px;
+  margin-top: 1rem;
+}
+
+.historyItem {
+  padding: 1rem;
+  background: var(--bg-dark);
+  border-radius: var(--radius-md);
+  border-left: 2px solid var(--success);
+  margin-bottom: 8px;
+}
+
+.historyTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.historyDate {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}

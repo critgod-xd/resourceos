@@ -1,0 +1,101 @@
+.header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.missionsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.missionCard {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.missionInfo {
+  flex: 2;
+}
+
+.missionTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.criticality {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.criticality.HIGH { background: rgba(239, 68, 68, 0.2); color: var(--danger); border: 1px solid var(--danger); }
+.criticality.MEDIUM { background: rgba(245, 158, 11, 0.2); color: var(--accent-amber); border: 1px solid var(--accent-amber); }
+.criticality.LOW { background: rgba(16, 185, 129, 0.2); color: var(--success); border: 1px solid var(--success); }
+
+.missionProgress {
+  flex: 3;
+}
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  margin-bottom: 6px;
+  color: var(--text-muted);
+}
+
+.progressBar {
+  height: 8px;
+  background: var(--bg-dark);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--accent-amber);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.missionActions {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.assignBtn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.assignBtn:hover {
+  background: var(--bg-panel-hover);
+  border-color: var(--text-muted);
+}

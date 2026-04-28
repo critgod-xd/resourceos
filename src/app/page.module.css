@@ -1,0 +1,129 @@
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.statCard {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.statHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.statValue {
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.statTrend {
+  font-size: 0.875rem;
+  color: var(--success);
+  font-weight: 500;
+}
+
+.statSubtext {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.iconRed { color: var(--danger); }
+.iconGreen { color: var(--success); }
+.iconBlue { color: var(--info); }
+.iconAmber { color: var(--accent-amber); }
+
+.chartsGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.chartCard {
+  padding: 1.5rem;
+  min-height: 250px;
+}
+
+.chartTitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.mapSection {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.mapTitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.liveIndicator {
+  color: var(--success);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.simulatedMap {
+  background-color: #12141a;
+  border-radius: var(--radius-md);
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.pin {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pin.urgent {
+  background-color: var(--danger);
+  animation: pulse-danger 2s infinite;
+}
+
+.pin.active {
+  background-color: var(--accent-amber);
+}
+
+.pinLabel {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  color: var(--text-muted);
+  pointer-events: none;
+}

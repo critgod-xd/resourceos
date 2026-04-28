@@ -1,0 +1,192 @@
+.adminHeader {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.statHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.statValue {
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.statTrend {
+  font-size: 0.875rem;
+  color: var(--success);
+  font-weight: 500;
+}
+
+.statSubtext {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.panelGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+.sectionPanel {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.ngoList {
+  display: flex;
+  flex-direction: column;
+}
+
+.ngoRow {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.ngoRow:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.ngoIcon {
+  width: 32px;
+  height: 32px;
+  background: var(--bg-dark);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--accent-amber);
+  margin-right: 1rem;
+}
+
+.ngoInfo {
+  flex: 2;
+}
+
+.ngoName {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.ngoZones {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.ngoStats {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.ngoStatValue {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+
+.ngoStatLabel {
+  color: var(--text-muted);
+}
+
+.ngoStatus {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.statusActive { color: var(--success); }
+.statusPending { color: var(--text-muted); }
+
+.resourceItem {
+  margin-bottom: 1.5rem;
+}
+
+.resourceHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 0.875rem;
+}
+
+.resourceTrack {
+  height: 6px;
+  background: var(--bg-dark);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.resourceFill {
+  height: 100%;
+  border-radius: 3px;
+}
+
+.predictionPanel {
+  background: linear-gradient(180deg, #1e222a 0%, #15181e 100%);
+  border: 1px solid var(--accent-amber-transparent);
+}
+
+.predictionList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.predictionItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--bg-dark);
+  border-radius: var(--radius-md);
+  border-left: 2px solid var(--info);
+}
+
+.predictionItem.critical {
+  border-left-color: var(--danger);
+}
+
+.predictionText {
+  font-size: 0.875rem;
+  line-height: 1.4;
+}

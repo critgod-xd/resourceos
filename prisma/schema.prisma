@@ -1,0 +1,82 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model User {
+  id           String      @id @default(uuid())
+  username     String      @unique
+  passwordHash String
+  role         String      @default("VOLUNTEER") // "ADMIN" or "VOLUNTEER"
+  volunteer    Volunteer?
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+}
+
+model Issue {
+  id            String   @id @default(uuid())
+  needType      String
+  location      String
+  urgency       Int
+  description   String
+  contact       String?
+  priorityScore Int
+  status        String   @default("PENDING") // "PENDING", "IN_PROGRESS", "RESOLVED"
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Volunteer {
+  id            String    @id @default(uuid())
+  userId        String    @unique
+  user          User      @relation(fields: [userId], references: [id])
+  name          String
+  tier          String    @default("BRONZE") // "PLATINUM", "GOLD", "SILVER", "BRONZE"
+  skills        String    // Comma separated e.g. "Medical,Food"
+  rating        Float     @default(5.0)
+  missionsCount Int       @default(0)
+  status        String    @default("ACTIVE") // "ACTIVE", "BUSY", "OFFLINE"
+  missions      Mission[]
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model Mission {
+  id          String     @id @default(uuid())
+  title       String
+  progress    Int        @default(0)
+  criticality String     @default("MEDIUM") // "HIGH", "MEDIUM", "LOW"
+  status      String     @default("ACTIVE") // "ACTIVE", "COMPLETED"
+  volunteerId String?
+  volunteer   Volunteer? @relation(fields: [volunteerId], references: [id])
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+}
+
+model Resource {
+  id        String   @id @default(uuid())
+  type      String
+  total     Int      @default(0)
+  used      Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model PartnerNGO {
+  id         String   @id @default(uuid())
+  name       String
+  zones      String
+  volunteers Int      @default(0)
+  missions   Int      @default(0)
+  status     String   @default("ACTIVE") // "ACTIVE", "PENDING"
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
