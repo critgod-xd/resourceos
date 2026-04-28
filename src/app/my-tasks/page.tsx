@@ -102,7 +102,10 @@ export default async function MyTasks() {
               <div style={{ padding: '1rem', color: 'var(--text-muted)' }}>No unassigned missions currently.</div>
             ) : (
               openMissions.map(mission => {
-                const claimAction = assignMission.bind(null, mission.id, volunteer.id);
+                const claimAction = async (formData: FormData) => {
+                  "use server";
+                  await assignMission(mission.id, volunteer.id);
+                };
                 return (
                   <div key={mission.id} className="glass-panel" style={{ padding: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <div>
